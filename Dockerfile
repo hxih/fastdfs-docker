@@ -38,5 +38,5 @@ RUN apk update \
 # export config
 VOLUME /etc/fdfs/
 
-EXPOSE 22122 23000 8888
+# EXPOSE 22122 23000 8888
 ENTRYPOINT ["/home/fastdfs.sh"]
