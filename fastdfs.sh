@@ -16,3 +16,5 @@ echo "start storage"
 sleep 1
 echo "start nginx"
 /usr/local/nginx/sbin/nginx
+#保持前台启动
+tail -f /dev/null
