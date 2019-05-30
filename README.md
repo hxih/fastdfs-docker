@@ -44,11 +44,13 @@ docker run -d --name storage --net=host -e SERVER=storage -e TRACKER_LIST=192.16
 
 ## VERSION 1.1
 ##### 1、新增环境变量NGINX_PORT自定义nginx监听端口（默认8888）；
-##### 2、下载所需文件及软件打包为soft.tar.gz，分别包含：
-<code>
+##### 2、下载所需文件及软件打包为soft.tar.gz，包含：
 https://github.com/happyfish100/fastdfs.git
+
 https://github.com/happyfish100/fastdfs-nginx-module.git
+
 https://github.com/happyfish100/libfastcommon.git
+
 http://nginx.org/download/nginx-1.15.4.tar.gz
+
 https://github.com/happyfish100/fastdfs/tree/master/docker/dockerfile_network/conf
-</code>
