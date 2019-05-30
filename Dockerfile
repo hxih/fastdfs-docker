@@ -5,6 +5,7 @@ ADD soft.tar.gz /usr/local/src/
 RUN apk update \
     && apk add --no-cache  git gcc libc-dev make automake autoconf libtool pcre pcre-dev zlib zlib-dev openssl-dev wget vim \
     && cd /usr/local/src \
+    && mkdir /etc/fdfs -p \
     && cp -af conf/client.conf /etc/fdfs/ \
     && cp -af conf/http.conf /etc/fdfs/ \
     && cp -af conf/mime.types /etc/fdfs/ \
