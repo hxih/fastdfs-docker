@@ -26,10 +26,10 @@ RUN apk update \
     && cd nginx-1.15.4/ \
     && ./configure --add-module=/usr/local/src/fastdfs-nginx-module/src/ \
     && make && make install \
+    && chmod u+x /home/fastdfs.sh \
     && rm -rf /usr/local/src
   
 # export config
 VOLUME /etc/fdfs/
 
-# EXPOSE 22122 23000 8888
-ENTRYPOINT ["/bin/sh" "/home/fastdfs.sh"]
+ENTRYPOINT ["/home/fastdfs.sh"]
