@@ -31,9 +31,7 @@ RUN apk update \
     && ./configure --add-module=/usr/local/src/fastdfs-nginx-module/src/   \
     && make && make install  \
     && chmod +x /home/fastdfs.sh \
-    && rm -rf /usr/local/src \
-    && mv /usr/local/nginx/conf/nginx.conf /usr/local/nginx/conf/nginx.conf.bak \
-    && cp /etc/fdfs/nginx.conf /usr/local/nginx/conf/
+    && rm -rf /usr/local/src
   
 # export config
 VOLUME /etc/fdfs/

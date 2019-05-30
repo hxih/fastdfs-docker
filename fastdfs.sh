@@ -1,4 +1,12 @@
 #!/bin/bash
+
+mv /usr/local/nginx/conf/nginx.conf /usr/local/nginx/conf/nginx.conf.bak &&\
+cp /etc/fdfs/nginx.conf /usr/local/nginx/conf/
+if [ ! -z ${NGINX_PORT} ];then
+    sed -i "s#8888#${NGINX_PORT}#g" /usr/local/nginx/conf/nginx.conf
+    sed -i "s#8888#${NGINX_PORT}#g" /etc/fdfs/storage.conf
+fi
+
 OLD="tracker_server=com.ikingtech.ch116221:22122"
 index=0
 for var in $(echo ${TRACKER_LIST}|sed 's#,# #g')
