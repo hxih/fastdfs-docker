@@ -43,8 +43,8 @@ docker run -d --name storage --net=host -e SERVER=storage -e TRACKER_LIST=192.16
 </code>
 
 ## VERSION 1.2
-##### 新增环境变量NGINX_ROOT，赋值为'true'时，容器中nginx以root身份运行。
-
+##### 1、新增环境变量NGINX_ROOT，赋值为'true'时，容器中nginx以root身份运行；
+##### 2、修复1.1版本如果不指定NGINX_PORT环境变量就无法访问的问题。
 
 ## VERSION 1.1
 ##### 1、新增环境变量NGINX_PORT自定义nginx监听端口（默认8888）；
