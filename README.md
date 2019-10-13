@@ -42,6 +42,10 @@ docker run -d --name storage --net=host -e SERVER=storage -e TRACKER_LIST=\${YOU
 docker run -d --name storage --net=host -e SERVER=storage -e TRACKER_LIST=192.168.1.2:22122,192.168.1.3:22122 fastdfs:1.0
 </code>
 
+## VERSION 1.2
+##### 新增环境变量NGINX_ROOT，赋值为'true'时，容器中nginx以root身份运行。
+
+
 ## VERSION 1.1
 ##### 1、新增环境变量NGINX_PORT自定义nginx监听端口（默认8888）；
 ##### 2、下载所需文件及软件打包为soft.tar.gz，包含：
