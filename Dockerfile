@@ -24,7 +24,7 @@ RUN apk update \
     && ./make.sh && ./make.sh install \
     && cd ../ \
     && cd nginx-1.15.4/ \
-    && ./configure --add-module=/usr/local/src/fastdfs-nginx-module/src/ \
+    && ./configure --add-module=/usr/local/src/soft/fastdfs-nginx-module/src/ \
     && make && make install \
     && chmod u+x /home/fastdfs.sh \
     && rm -rf /usr/local/src
